@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Partner Quest</title>
+    <title>Pokémon: Partner Quest</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -20,13 +21,65 @@
 
 <div id="game">
 
-    <div id="scene">
+    <!-- Fondo -->
+    <div id="background"></div>
 
-    </div>
+    <!-- Pantalla de inicio -->
+    <section id="titleScreen" class="screen">
+
+        <img
+            id="pokemonLogo"
+            src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
+            alt="Pokemon Logo">
+
+        <h2 id="gameTitle">
+            Partner Quest
+        </h2>
+
+        <p id="subtitle">
+            A Special Adventure
+        </p>
+
+        <button id="startButton">
+            ► PRESS START
+        </button>
+
+    </section>
+
+    <!-- Profesor Oak (oculto de momento) -->
+    <section id="oakScreen" class="screen hidden">
+
+        <div id="oakContainer">
+
+            <img
+                id="oakSprite"
+                src="https://archives.bulbagarden.net/media/upload/8/88/Oak_RG.png"
+                alt="Professor Oak">
+
+        </div>
+
+        <div id="dialogBox">
+
+            <p id="dialogText">
+
+                Hello there!
+
+            </p>
+
+            <button id="nextButton">
+
+                NEXT ▶
+
+            </button>
+
+        </div>
+
+    </section>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
