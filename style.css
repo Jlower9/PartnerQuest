@@ -1,105 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+<!DOCTYPE html>
+<html lang="en">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<head>
 
-html,body{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body{
+    <title>Pokémon: Partner Quest</title>
 
-    background:black;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    font-family:'Press Start 2P', cursive;
+    <link rel="stylesheet" href="style.css">
 
-}
+</head>
 
-#game{
+<body>
 
-    width:100vw;
-    height:100vh;
+<div id="game">
 
-    background:black;
+    <!-- Fondo -->
+    <div id="background"></div>
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    <!-- Pantalla de inicio -->
+    <section id="titleScreen" class="screen">
 
-}
+        <img
+            id="pokemonLogo"
+            src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
+            alt="Pokemon Logo">
 
-#scene{
+        <h2 id="gameTitle">
+            Partner Quest
+        </h2>
 
-    width:100%;
-    height:100%;
+        <p id="subtitle">
+            A Special Adventure
+        </p>
 
-    position:relative;
+        <button id="startButton">
+            ► PRESS START
+        </button>
 
-    background:linear-gradient(
-        to bottom,
-        #8fd3ff 0%,
-        #8fd3ff 58%,
-        #4CAF50 58%,
-        #4CAF50 100%
-    );
+    </section>
 
-    overflow:hidden;
+    <!-- Profesor Oak (oculto de momento) -->
+    <section id="oakScreen" class="screen hidden">
 
-}
+        <div id="oakContainer">
 
-#logo{
+            <img
+                id="oakSprite"
+                src="https://archives.bulbagarden.net/media/upload/8/88/Oak_RG.png"
+                alt="Professor Oak">
 
-    position:absolute;
+        </div>
 
-    top:80px;
+        <div id="dialogBox">
 
-    left:50%;
+            <p id="dialogText">
 
-    transform:translateX(-50%);
+                Hello there!
 
-    width:600px;
-    max-width:90%;
+            </p>
 
-    image-rendering:pixelated;
+            <button id="nextButton">
 
-}
+                NEXT ▶
 
-#pressStart{
+            </button>
 
-    position:absolute;
+        </div>
 
-    bottom:120px;
+    </section>
 
-    width:100%;
+</div>
 
-    text-align:center;
+<script src="script.js"></script>
 
-    color:white;
+</body>
 
-    font-size:18px;
-
-    animation:blink 1s infinite;
-
-    text-shadow:
-    3px 3px black;
-
-}
-
-@keyframes blink{
-
-    50%{
-
-        opacity:0;
-
-    }
-
-}
+</html>
